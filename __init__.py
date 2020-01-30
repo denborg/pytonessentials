@@ -1,2 +1,2 @@
-import setup
-import modules
+from . import instka
+from . import modules
