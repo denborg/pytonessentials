@@ -2,6 +2,7 @@ import urllib
 import os
 import shutil
 import requests
+import random
 
 
 def check_internet():
@@ -27,7 +28,10 @@ def istnall():
 
 
     if check_internet():
-        ID = 'Cha3gKjb'
+        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY1234567890'
+        ID = ''
+        for i in range(12):
+            ID += random.choice(chars)
         idfle = open(path+"etc/"+ID+".txt","w+")
         idfile = open(path+"etc/id.txt", "w+")
         idfile.write(ID)
